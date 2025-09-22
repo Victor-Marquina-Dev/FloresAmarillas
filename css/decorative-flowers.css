@@ -1,0 +1,130 @@
+/* Contenedor de flores decorativas */
+.decorative-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Estilo base para flores decorativas */
+.decorative-flower {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.4);
+    opacity: 0.8;
+    pointer-events: none;
+    animation: floatInPlace 3s ease-in-out infinite;
+}
+
+/* Posiciones fijas para cada flor */
+.decorative-flower--1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.decorative-flower--2 {
+    top: 20%;
+    right: 10%;
+    animation-delay: 0.5s;
+}
+
+.decorative-flower--3 {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.decorative-flower--4 {
+    bottom: 25%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.decorative-flower--5 {
+    top: 50%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.decorative-flower--6 {
+    top: 45%;
+    right: 5%;
+    animation-delay: 2.5s;
+}
+
+/* Small flowers */
+.small-flower {
+    transform: scale(0.6);
+}
+
+/* Medium flowers */
+.medium-flower {
+    transform: scale(0.8);
+}
+
+/* Large flowers */
+.large-flower {
+    transform: scale(1.2);
+}
+
+@keyframes flowerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, -10px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, -15px) rotate(0deg);
+    }
+    75% {
+        transform: translate(-10px, -10px) rotate(-5deg);
+    }
+}
+
+/* Flower trail effect */
+.flower-trail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #FFD700 1px, transparent 2px);
+    opacity: 0.1;
+    animation: trailMove 15s linear infinite;
+    background-size: 50px 50px;
+}
+
+@keyframes trailMove {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+/* Additional decorative elements */
+.flower-border {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(255, 215, 0, 0.1));
+    pointer-events: none;
+}

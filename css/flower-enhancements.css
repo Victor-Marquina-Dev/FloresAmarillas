@@ -1,0 +1,45 @@
+.flower__leaf {
+    background-color: #FFD700 !important;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.flower__white-circle {
+    background-color: #FFF8DC !important;
+}
+
+.flower__light {
+    background-color: rgba(255, 215, 0, 0.7) !important;
+    filter: blur(1px);
+}
+
+.night {
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+}
+
+.container {
+    background-color: #1a1a1a;
+}
+
+/* Professional subtle animations */
+.flower {
+    transition: transform 0.5s ease;
+}
+
+.flower:hover {
+    transform: scale(1.05);
+}
+
+.flower__grass {
+    filter: brightness(0.9);
+}
+
+/* Enhance depth with shadows */
+.flower__line {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Smoother animations */
+.grow-ans {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

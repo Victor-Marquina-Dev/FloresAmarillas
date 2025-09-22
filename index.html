@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main-page.css">
+    <link rel="stylesheet" href="css/spotify.css">
+    <link rel="stylesheet" href="css/decorative-flowers.css">
+    <link rel="stylesheet" href="css/music-controls.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Para mi amor 🌻</title>
+</head>
+
+<body>
+    <!-- Decorative Flowers -->
+    <div class="decorative-flowers">
+        <div class="flower-trail"></div>
+        <div class="decorative-flower flower-1 small-flower"></div>
+        <div class="decorative-flower flower-2 medium-flower"></div>
+        <div class="decorative-flower flower-3 large-flower"></div>
+        <div class="decorative-flower flower-4 medium-flower"></div>
+        <div class="decorative-flower flower-5 small-flower"></div>
+        <div class="decorative-flower flower-6 large-flower"></div>
+        <div class="decorative-flower flower-7 medium-flower"></div>
+        <div class="decorative-flower flower-8 small-flower"></div>
+    </div>
+    <div class="flower-border"></div>
+    <div class="content">
+        <div class="greetings">
+            <span>M</span>
+            <span>i</span>
+            <span>&nbsp;</span>
+            <span>A</span>
+            <span>m</span>
+            <span>o</span>
+            <span>r</span>
+        </div>
+        <div class="description">
+            <span>Tengo algo especial para ti...</span>
+        </div>
+        <div class="message">
+            <p>En este día de las flores amarillas,<br>quiero expresarte todo mi amor...</p>
+        </div>
+        <div class="button">
+            <a href="flower.html" class="cta-button">Descubre tu sorpresa 🌻</a>
+        </div>
+        
+        <div class="spotify-section">
+            <p>Escucha nuestra playlist que te prepare  🎵</p>
+            <iframe 
+                    title="Playlist de Spotify - Flores Amarillas"
+                    src="https://open.spotify.com/embed/playlist/5uUvK2zHVqZxE4r4jz8XwE?utm_source=generator&track=68&autoplay=1" 
+                    width="100%" 
+                    height="152" 
+                    style="border: none; border-radius: 12px; margin-top: 20px;" 
+                    allowfullscreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <audio id="bgMusic" src="sound/ChristianBasso&HaienQiu-Flowers.mp3" loop></audio>
+    <div class="music-controls">
+        <button id="playPause" onclick="toggleMusic()">
+            <span class="play">▶️</span>
+            <span class="pause hidden">⏸️</span>
+        </button>
+    </div>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        const playPause = document.getElementById('playPause');
+        const play = document.querySelector('.play');
+        const pause = document.querySelector('.pause');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                play.classList.add('hidden');
+                pause.classList.remove('hidden');
+            } else {
+                music.pause();
+                play.classList.remove('hidden');
+                pause.classList.add('hidden');
+            }
+        }
+    </script>
+    <script src="js/music-controls.js"></script>
+</body>
+
+</html>
